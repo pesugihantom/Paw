@@ -1,0 +1,36 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+ <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8">
+<h2>ISI TABEL BARANG</h2>
+<form action="barang_simpan.php" method="post" enctype="multipart/form-data" >
+<table class="table table-hover">
+  <tr>
+	<td><span class="glyphicon glyphicon-phone" >&nbsp;Nama</td>
+	<td><input type="text" class="form-control" name="nama" /></td>
+  </tr>
+  <tr>
+	<td><span class="glyphicon glyphicon-usd" >&nbsp;Harga</td>
+	<td><input type="text" class="form-control" name="harga"  /></td>
+  </tr>
+  <tr>
+	<td><span class="glyphicon glyphicon-info-sign" >&nbsp;Stok</td>
+	<td><input type="text" class="form-control" name="stok" /></td>
+	</tr>
+	<tr>
+	
+	<td><span class="glyphicon glyphicon-picture" >&nbsp;Gambar [max=1.5mb]</span></td>
+	<td><input type="file" class="form-control" name="foto"></td>
+	</tr>
+	<tr>
+	<td colspan="2" align="center">
+	<button type="submit" class="btn btn-primary">Isikan</button>
+	<button type="reset" class="btn btn-warning">Reset</button>
+	</td>
+   </tr>
+  </table>
+</form>

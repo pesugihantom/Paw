@@ -1,0 +1,31 @@
+<?php
+$namacust = $_POST['namacust'];
+$email = $_POST ['email'];
+$notelp = $_POST['notelp'];
+$tanggal = date("Y-m-d");
+$barang_pilih = '';
+$qty = 1 ;
+
+$dataValid = "Ya";
+if(strlen(trim($namacust))==0){
+echo "Nama harus diisi<br/>";
+$dataValid="Tidak";
+}
+if(strlen(trim($notelp))==0){
+echo "No Telepon harus diisi<br/>";
+$dataValid="Tidak";
+}
+if(isset($_COOKIE['keranjang'])){
+$barang_pilih = $_COOKIE ['keranjang'];
+} else {
+	echo "Keranjang Belanja Kosong <br/>";
+	$dataValid = "TIDAK";
+}
+if($dataValid == "TIDAK"){
+	echo "Masih Ada kesalahan, silahkan perbaiki <br/>";
+    echo "<input type='button' value='Kembali' onClick='self.history.back()'>";
+	exit;
+	}
+	echo "Data siap disimpan";
+	setcookie('keranjang',$barang_pilih,time()-3600);
+	?>
